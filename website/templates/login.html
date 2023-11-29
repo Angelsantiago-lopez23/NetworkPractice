@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %}
+<!--We are going to extend the base hmtl here. We can override anything within the block but everything else still same. -->
+<!--To write an if,elif, else statement we do the percent type of block. Just need endif for other conditions. No endelif, etc.-->
+{% block content %}
+<form method="POST">
+    <h3 align="center">Login</h3>
+    <!--Using a div class from bootstrap. Defining name for input is important. So we can access the email address in the backend through the name.-->
+    <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"
+        />
+    </div>
+    
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password"
+        />
+    </div>
+    <br />
+
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+{% endblock %}
+
+<!--Now we see in our web that we method not allowed. HTTP REQUEST (POST,GET, ETC) THERE IS A POST REQUEST OR POST METHOD, ETC -->
+<!--fad-->
